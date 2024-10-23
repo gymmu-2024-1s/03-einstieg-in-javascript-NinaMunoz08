@@ -53,10 +53,9 @@ export function aufgabe02(args) {
   //Läuft Zeichen für Zeichen über den ganzen Text.
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+    const upperCaseLetter = currentElement.toUpperCase()
     // Hänge das aktuelle Zeichen doppelt an
-    result.push(currentElement)
-    result.push(currentElement)
+    result.push(upperCaseLetter)
   }
 
   return result.join("")
