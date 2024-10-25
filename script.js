@@ -96,7 +96,7 @@ export function aufgabe08(args) {
 
     if (currentElement === "e") {
       // do nothing
-      result.push(3)
+      result.push(3) // 3 ersetzt "e"
     } else {
       result.push(currentElement)
     }
