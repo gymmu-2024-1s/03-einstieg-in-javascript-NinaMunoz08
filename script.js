@@ -166,10 +166,10 @@ export function aufgabe12(args) {
 
     //Suche die Position des ersten e's
     if (currentElement === "e") {
-      return i
+      return i //er springt aus der Funktone raus, wenn e gefunden wird bricht es ab und es wird nicht mehr ausgeführt.
     }
   }
-  return -1 // or null
+  return -1 // -1 zeigt an,dass es nicht in der Liste steht
 }
 
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
@@ -225,3 +225,18 @@ export function aufgabe15(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+export function aufgabe16(args) {
+  const input = args
+  const result = []
+  //Lesen Sie die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und den Resr als den zweiten Teil.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "$") {
+      break
+    }
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
