@@ -190,3 +190,38 @@ export function aufgabe13(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
+export function aufgabe14(args) {
+  const input = args
+  let count = 0
+
+  //suche die position des dritten e's
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === "e") {
+      count++
+    }
+    if (count === 3) {
+      return i
+    }
+  }
+
+  return -1 //return -1 if there are less than 3 e's
+}
+
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
+export function aufgabe15(args) {
+  const input = args
+  const result = []
+  // Lesen Sie die Eingabe nur bis zum ersten Leerzeichen ein.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      break
+    }
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
