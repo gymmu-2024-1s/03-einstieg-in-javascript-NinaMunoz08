@@ -152,4 +152,24 @@ export function aufgabe10(args) {
   return result.join("")
 }
 
-linkupExerciseHandler("[data-click=aufgabe010]", aufgabe10)
+linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
+
+export function aufgabe12(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um die Position des ersten e's zu speichern
+  let firstEPosition = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    //Suche die Position des ersten e's
+    if (currentElement === "e") {
+      return i
+    }
+  }
+  return -1 // or null
+}
+
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
