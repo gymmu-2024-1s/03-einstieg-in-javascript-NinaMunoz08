@@ -262,3 +262,27 @@ export function aufgabe16(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
+export function aufgabe19(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    //sollte 'aa' heissen.
+    if (currentElement === "a") {
+      result.push("aa")
+    }
+  }
+  // jedes Zeichen sollte verdoppelt werden
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+    result.push(currentElement)
+  }
+
+  result.push(currentElement)
+}
+
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
