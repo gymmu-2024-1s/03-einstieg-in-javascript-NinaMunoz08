@@ -271,7 +271,7 @@ export function aufgabe19(args) {
     const currentElement = input[i]
 
     //sollte 'aa' heissen.
-    if (currentElement === "a") {
+    if (currentElement === "aa") {
       result.push("aa")
     }
   }
@@ -282,7 +282,18 @@ export function aufgabe19(args) {
     result.push(currentElement)
   }
 
-  result.push(currentElement)
+  return result.join("")
 }
 
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
