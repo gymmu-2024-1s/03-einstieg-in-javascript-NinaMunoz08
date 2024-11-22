@@ -347,6 +347,20 @@ export function aufgabe24(args) {
 
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
+export function aufgabe25(args) {
+  const input = args
+  const result = []
+  //suche die Position des ersten e's
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      return i
+    }
+  }
+  return -1
+}
+linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+
 export function aufgabe27(args) {
   const input = args
   const result = []
@@ -357,7 +371,7 @@ export function aufgabe27(args) {
     }
   }
 
-  return result.join("")
+  return true
 }
 
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
