@@ -103,6 +103,15 @@ export function aufgabe05(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
+export function aufgabe07(args) {
+  const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
+
+  // Lösung kommt von KI
+  // mit Variable.inCludes ("text") kann getestet werden, ob die Zeichenkette "Text " in der Variable vorkommt
+  return input.includes("und")
+}
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
 export function aufgabe08(args) {
   const input = args
   const result = []
