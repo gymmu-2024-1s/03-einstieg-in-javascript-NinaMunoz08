@@ -82,10 +82,20 @@ linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
   const input = args
-  const result = []
-
-  return result.join("")
+  // erstelle eine zählervariable für die Leerzeichen
+  let count = 0
+  // überprüfe jedes Zeichen in der Eingabe
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      count = count + 1 // zählen die Leerzeichen
+    }
+  }
+  // Gib count + 1 zurück, weil esbein Wort mehr gibt wie Leerzeichen
+  return count + 1
 }
+
+// Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
@@ -350,15 +360,13 @@ linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 export function aufgabe25(args) {
   const input = args
   const result = []
-  //suche die Position des ersten e's
+  // sollte testen on die Eingabe eine Zahl ist
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === "e") {
-      return i
-    }
   }
-  return -1
+  return result.join("")
 }
+
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 
 export function aufgabe27(args) {
