@@ -101,7 +101,12 @@ linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 export function aufgabe05(args) {
   return /[A-Z]/.test(args) // überprüfe ob mindestens eine Großbuchstabe vorhanden ist.
 }
+
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {}
+
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {
   const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
@@ -267,6 +272,12 @@ export function aufgabe16(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+export function aufgabe17(args) {}
+
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+export function aufgabe18(args) {}
+
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
 
 export function aufgabe19(args) {
   const input = args
@@ -378,6 +389,18 @@ export function aufgabe25(args) {
 
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 
+export function aufgabe26(args) {
+  const input = args
+  const result = []
+  // sollte testen on die Eingabe eine Zahl ist
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
+
 export function aufgabe27(args) {
   const input = args
   const result = []
@@ -392,3 +415,9 @@ export function aufgabe27(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function aufgabe28(args) {
+  const input = args
+  const result = []
+}
+linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
