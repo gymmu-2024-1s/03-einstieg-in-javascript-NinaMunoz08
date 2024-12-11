@@ -104,7 +104,13 @@ export function aufgabe05(args) {
 
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
-export function aufgabe06(args) {}
+export function aufgabe06(args) {
+  const input = args
+  const result = []
+
+  return result.join("")
+}
+//Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Sonderzeichen vorkommt.
 
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
