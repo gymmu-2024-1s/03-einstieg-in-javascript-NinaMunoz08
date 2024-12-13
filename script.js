@@ -483,3 +483,51 @@ export function aufgabe28(args) {
   const result = []
 }
 linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
+export function Bubblesort(args) {
+  const text = args
+  const list = text.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+  for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+      const tmp = list[i + 1]
+      list[i + 1] = list[i]
+      list[i] = tmp
+      i = -1 // starte von vorne wenn etwas vertauscht wurde.
+    }
+  }
+  const result = list.join("")
+
+  return result
+}
+linkupExerciseHandler("[data-click=Bubblesort]", Bubblesort)
+
+export function Selectionsort(args) {
+  const input = args.split("")
+  const result = []
+  let n = input.length
+  for (let i = 0; i < n - 1; i++) {
+    // Assume the current position holds
+    // the minimum element
+    let min_idx = i
+
+    // Iterate through the unsorted portion
+    // to find the actual minimum
+    for (let j = i + 1; j < n; j++) {
+      if (input[j] < input[min_idx]) {
+        // Update min_idx if a smaller element is found
+        min_idx = j
+      }
+    }
+
+    // Move minimum element to its
+    // correct position
+    let temp = input[i]
+    input[i] = input[min_idx]
+    input[min_idx] = temp
+  }
+  return input
+}
+
+linkupExerciseHandler("[data-click=Selectionsort]", Selectionsort)
