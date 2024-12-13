@@ -326,7 +326,27 @@ export function aufgabe17(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
-export function aufgabe18(args) {}
+export function aufgabe18(args) {
+  const input = args
+
+  // Wir können die Aufgabe 17 verwenden um eine Liste zu bekommen.
+  const nameAndAge = aufgabe17(input)
+
+  //Wir generieren unsere Ausgabenliste
+  const result = []
+
+  // Hier schreiben wir ganze Worte in die Liste, auch das ist möglich
+  result.push("Sie heissen ")
+
+  // Wir setzten die Liste dann sop zusammen, dass der Name und das Alter an der richtigen Stelle eingefügt werden.
+  result.push(nameAndAge[0])
+  result.push(" und sind ")
+  result.push(nameAndAge[1])
+  result.push(" Jahre alt.")
+
+  // Wie immer geben wir das Resultat als Text zurück
+  return result.join("")
+}
 
 linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
 
