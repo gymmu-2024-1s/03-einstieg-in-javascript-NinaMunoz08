@@ -483,6 +483,23 @@ export function aufgabe28(args) {
   const result = []
 }
 linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
+
+export function aufgabe29(arg) {
+  const input = arg
+  let count = 0
+  // suche die position des dritten i's
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === "i") {
+      count++
+    }
+    if (count === 3) {
+      return i
+    }
+  }
+  return -1
+}
+linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
+
 export function Bubblesort(args) {
   const text = args
   const list = text.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
