@@ -133,13 +133,19 @@ linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 export function aufgabe06(args) {
   const input = args
   const result = []
+  let hasSonderzeichen = false //sagt das es keine Sonderzeichen gibt, um später zu testen, ob es doch Sonderzeichen gibt
+  // Schreibe eine Funktion, die testet ob ein Sonderzeichen vorkommt
 
-  return result.join("")
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (ascii >= 33 && ascii <= 47) {
+      hasSonderzeichen = true // Wenn ein Sonderzeichen gefunden wird, wird hasSonderzeichen auf true gesetzt
+    }
+  }
+  return hasSonderzeichen //Sagt ob Sonderzeichen vorhanden sind
 }
-//Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Sonderzeichen vorkommt.
-
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
-
 export function aufgabe07(args) {
   const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
 
