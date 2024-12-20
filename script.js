@@ -610,6 +610,32 @@ export function aufgabe31(args) {
 
 linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31) //mit Hilfe von KI erstellt
 
+export function aufgabe32(args) {
+  const input = args
+  const result = []
+
+  // Sucht nach der Zeichenkette 'abc' unter Verwendung von ASCII-Werten
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const asciiValue = currentElement.charCodeAt(0) // Holt den ASCII-Wert des aktuellen Zeichens
+
+    if (asciiValue === 97) {
+      // ASCII-Wert von 'a'
+      if (input[i + 1] && input[i + 1].charCodeAt(0) === 98) {
+        // ASCII-Wert von 'b'
+        if (input[i + 2] && input[i + 2].charCodeAt(0) === 99) {
+          // ASCII-Wert von 'c'
+          return true // Gibt true zurück, wenn das Wort 'abc' gefunden wird
+        }
+      }
+    }
+  }
+
+  return false // Gibt false zurück, wenn das Wort 'abc' nicht gefunden wird
+}
+
+linkupExerciseHandler("[data-click=aufgabe32]", aufgabe32)
+
 export function Bubblesort(args) {
   const text = args
   const list = text.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
