@@ -590,6 +590,26 @@ export function aufgabe30(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30) //mit Hilfe von KI erstellt
 
+export function aufgabe31(args) {
+  const input = args
+  const result = []
+
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const asciiValue = currentElement.charCodeAt(0) // holt den ASCII-Wert des aktuellen Zeichens
+
+    // Zählt alle Zeichen mit einem ASCII-Wert zwischen 65 und 90 (Großbuchstaben A-Z)
+    if (asciiValue >= 65 && asciiValue <= 90) {
+      count++ // Inkrementiert den Zähler, wenn der ASCII-Wert im Bereich für Großbuchstaben liegt
+    }
+  }
+
+  return count
+}
+
+linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31) //mit Hilfe von KI erstellt
+
 export function Bubblesort(args) {
   const text = args
   const list = text.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
