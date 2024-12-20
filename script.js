@@ -507,8 +507,23 @@ linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
 
 export function aufgabe27(args) {
   const input = args
-  return !isNaN(input)
-} // Das "isNaN" ist eine Variable, die überprüft ob "Input" eine Zahl ist. Das bedeutet wenn "Input" eine Zahl ist, wird mit "true" geantwortet. Sie steht für "is Not a Number". Wenn "Input" keine Zahl ist, wird mit "false" geantwortet. Dazu ist das Ausrufezeichen dafür da, um die Antwort wie umzukehren. Das bedeutet, wenn kein Ausrufezeichen da wäre, würde es bei einer Zahl mit "false" antworten. anders gesagt, ist es ein Negationszeiche, welches den Wahrheitswert einer Bedingung umkehrt.
+  const result = []
+  //sollte testen ob die Eingabe eine Zahl ist
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement >= "0" && currentElement <= "9") {
+      result.push(currentElement)
+    }
+  }
+  //sollte testen ob die Eingabe keine Zahl ist
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement < "0" || currentElement > "9") {
+      return false
+    }
+  }
+  return result.join("")
+}
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
 
 export function aufgabe28(args) {
