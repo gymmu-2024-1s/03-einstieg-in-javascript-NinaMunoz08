@@ -147,14 +147,22 @@ export function aufgabe06(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 export function aufgabe07(args) {
-  const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
-
-  // Lösung kommt von KI
-  // mit Variable.inCludes ("text") kann getestet werden, ob die Zeichenkette "Text " in der Variable vorkommt
-  return input.includes("und")
+  const input = args
+  const result = []
+  //Sollte das Wort 'und' erkennen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "u") {
+      if (input[i + 1] === "n") {
+        if (input[i + 2] === "d") {
+          return true //gibt true zurück, wenn das Wort erhalten ist
+        }
+      }
+    }
+  }
+  return false // gibt false zuück wenn das Wort nicht erhalten ist
 }
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
-
 export function aufgabe08(args) {
   const input = args
   const result = []
