@@ -636,3 +636,29 @@ export function Selectionsort(args) {
 }
 
 linkupExerciseHandler("[data-click=Selectionsort]", Selectionsort)
+export function Radixsort(args) {
+  const input = args.split("") // Eingabestring in ein Array umwandeln
+  let max = Math.max(...input.map(Number)) // Die größte Zahl im Array finden
+
+  // Iteriere über jede Stelle (von der kleinsten bis zur größten)
+  let place = 1
+  while (max / place >= 1) {
+    // Sortiere das Array nach der aktuellen Stelle
+    for (let i = 0; i < input.length - 1; i++) {
+      for (let j = i + 1; j < input.length; j++) {
+        let digitA = Math.floor(input[i] / place) % 10 // Extrahiere die Ziffer von input[i]
+        let digitB = Math.floor(input[j] / place) % 10 // Extrahiere die Ziffer von input[j]
+
+        if (digitA > digitB) {
+          // Tausche die Werte, wenn die Ziffern nicht in der richtigen Reihenfolge sind
+          let temp = input[i]
+          input[i] = input[j]
+          input[j] = temp
+        }
+      }
+    }
+    place *= 10 // Gehe zur nächsten Ziffer (Zehner, Hunderter, etc.)
+  }
+
+  return input.join("") // Wandelt das Array zurück in einen String um
+}
