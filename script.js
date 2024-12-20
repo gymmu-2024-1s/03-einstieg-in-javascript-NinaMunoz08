@@ -568,6 +568,27 @@ export function aufgabe29(arg) {
   return -1
 }
 linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
+export function aufgabe30(args) {
+  const input = args
+  const result = []
+
+  let allGood = true
+
+  //prüfe ob nach jedem "." ein Großbuchstabe kommt.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      //prüfe ob das nächste Zeichen ein Großbuchstabe ist.
+      if (input[i + 1] && input[i + 1] === input[i + 1].toUpperCase()) {
+        //do nothing
+      } else {
+        allGood = false
+      }
+    }
+  }
+  return allGood
+}
+linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30) //mit Hilfe von KI erstellt
 
 export function Bubblesort(args) {
   const text = args
