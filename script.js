@@ -435,7 +435,18 @@ linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
 
 export function aufgabe23(args) {
   const input = args
-  const result = []
+  const result = [] //Leere Liste, in der wir das Resultat anhängen
+  const firstelement = input[0]
+
+  // Hänge firstelement an die Liste an
+  result.push(firstelement)
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+
+  result.push(firstelement) //Schreibe das erste Zeichen am Ende
 
   return result.join("")
 }
