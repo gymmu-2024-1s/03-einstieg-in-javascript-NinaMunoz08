@@ -488,13 +488,21 @@ linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 export function aufgabe26(args) {
   const input = args
   const result = []
-  // sollte testen on die Eingabe eine Zahl ist
+  // Vergleiche und vertausche das erste und das zweite Zeichen
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    if (i === 0) {
+      result.push(input[1])
+    } else if (i === 1) {
+      result.push(input[0])
+    } else {
+      //do nothing
+      result.push(currentElement)
+    }
   }
   return result.join("")
 }
-
 linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
 
 export function aufgabe27(args) {
