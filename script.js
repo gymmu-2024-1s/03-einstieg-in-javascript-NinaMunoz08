@@ -680,7 +680,6 @@ export function Selectionsort(args) {
   }
   return input
 }
-
 linkupExerciseHandler("[data-click=Selectionsort]", Selectionsort)
 export function Radixsort(args) {
   const input = args.split("") // Eingabestring in ein Array umwandeln
@@ -708,3 +707,4 @@ export function Radixsort(args) {
 
   return input.join("") // Wandelt das Array zurück in einen String um
 }
+linkupExerciseHandler("[data-click=Radixsort]", Radixsort)

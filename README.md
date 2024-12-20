@@ -154,3 +154,15 @@ Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
 ## Aufgabe 29
 
 eigene Aufgabe
+
+## Aufgabe 30
+
+eigene Aufgabe
+
+## Aufgabe 31
+
+eigene Aufgabe
+
+## Aufgabe 32
+
+eigene Aufgabe
