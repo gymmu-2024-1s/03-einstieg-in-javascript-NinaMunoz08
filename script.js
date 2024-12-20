@@ -283,7 +283,7 @@ export function aufgabe14(args) {
     }
   }
 
-  return -1 //return -1 if there are less than 3 e's
+  return -1 //gibt -1 zurück, wenn es weniger als 3 e's gibt.
 }
 
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
